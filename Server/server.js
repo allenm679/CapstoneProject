@@ -1,4 +1,4 @@
-require("dotenv").config()
+// require("dotenv").config()
 
 const express = require('express')
 const cors = require('cors')
@@ -13,19 +13,17 @@ app.use(cors())
 const {
     login,
     register
-} = require('./login/auth.js')
+} = require('../Login/login')
 
 app.post(`/api/login`, login)
 app.post(`/api/register`,register)
 
 
+app.get(`/api/restaurant`,)
+
+
 const port = process.env.PORT || 4000
 
 
-app.listen(port,(err) => {
-    if(err) {
-        console.log(err)
-    }
-})
 
 app.listen(port, () => console.log(`Listening on port ${port}!`))
