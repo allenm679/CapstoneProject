@@ -24,3 +24,9 @@ getRestaurantBtn.addEventListener('click', () => {
 
 
 getAllRestaurants()
+
+
+
+// const displayRestaurants = (arr) => {
+//     console.log(arr)
+// }

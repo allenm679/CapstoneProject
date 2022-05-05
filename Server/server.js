@@ -16,7 +16,7 @@ app.use(cors())
 const {
     login,
     register
-} = require('./restaurantc')
+} = require('./loginController')
 
 //change filedirectory later on!
  app.post(`/login`, login)
@@ -24,8 +24,11 @@ const {
 
  app.post('/seed',seed)
 
+const {
+    getRestaurant
+} = require('./restaurantController')
 
-// app.get(`/`,)
+app.get(`/restaurants`,getRestaurant)
 
 
 const port = process.env.PORT || SERVER_PORT
