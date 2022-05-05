@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express()
 
 const {SERVER_PORT} = process.env
-const {seed} = require('../Server/seed')
+const {seed} = require('./seed')
 
 app.use(express.json())
 app.use(cors())
