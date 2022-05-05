@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express()
 
 const {SERVER_PORT} = process.env
-// const {seed} = require('./seed')
+const {seed} = require('./seed')
 
 app.use(express.json())
 app.use(cors())
@@ -22,13 +22,13 @@ const {
  app.post(`/login`, login)
  app.post(`/register`,register)
 
-//  app.post('/seed',seed)
+ app.post('/seed',seed)
 
 
 // app.get(`/`,)
 
 
-const port = process.env.PORT || 4000
+const port = process.env.PORT || SERVER_PORT
 
 
 

@@ -1,8 +1,8 @@
 // document is not defined here
 
-// const userContainer = document.querySelector('#user-info')
-// const loginForm = document.querySelector('#login-form')
-// const registerForm = document.querySelector('#register-form')
+const userContainer = document.querySelector('#user-info')
+const loginForm = document.querySelector('#login-form')
+const registerForm = document.querySelector('#register-form')
 
 const baseURL = `http://localhost:4000`
 
@@ -86,27 +86,6 @@ function createUserCard(data) {
 }
 
 // This isnt defined either
-// loginForm.addEventListener('submit',loginSubmitHandler)
-// registerForm.addEventListener('submit', registerSubmitHandler)
+loginForm.addEventListener('submit',loginSubmitHandler)
+registerForm.addEventListener('submit', registerSubmitHandler)
 
-const users = []
-
-module.exports = {
-    login: (req, res) => {
-      console.log('Logging In User')
-      console.log(req.body)
-      const { username, password } = req.body
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].username === username && users[i].password === password) {
-          res.status(200).send(users[i])
-        }
-      }
-      res.status(400).send("User not found.")
-    },
-    register: (req, res) => {
-        console.log('Registering User')
-        console.log(req.body)
-        users.push(req.body)
-        res.status(200).send(req.body)
-    }
-}
