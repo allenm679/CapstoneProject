@@ -16,7 +16,7 @@ app.use(cors())
 const {
     login,
     register
-} = require('../Login/login')
+} = require('./restaurantc')
 
 //change filedirectory later on!
  app.post(`/login`, login)
