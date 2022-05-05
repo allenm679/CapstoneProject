@@ -392,60 +392,60 @@
         "category": "Mediterranean"
     },
     {
-        "restaurant": "",
-        "area": "",
-        "zipcode": "",
-        "cost": "",
-        "id": "",
-        "category": ""
+        "restaurant": "First Chinese BBQ",
+        "area": "Haltom Texas",
+        "zipcode": "76117",
+        "cost": "$",
+        "id": "50",
+        "category": "Asian"
     },
     {
-        "restaurant": "",
-        "area": "",
-        "zipcode": "",
-        "cost": "",
-        "id": "",
-        "category": ""
+        "restaurant": "Pho King Sushi Bar",
+        "area": "Fort Worth Texas",
+        "zipcode": "76177",
+        "cost": "$",
+        "id": "51",
+        "category": "Asian"
     },
     {
-        "restaurant": "",
-        "area": "",
-        "zipcode": "",
-        "cost": "",
-        "id": "",
-        "category": ""
+        "restaurant": "Bushi Bushi Dim Sum Place",
+        "area": "Dallas Texas",
+        "zipcode": "75254",
+        "cost": "$$",
+        "id": "52",
+        "category": "Asian"
     },
     {
-        "restaurant": "",
-        "area": "",
-        "zipcode": "",
-        "cost": "",
-        "id": "",
-        "category": ""
+        "restaurant": "Pho Dalat",
+        "area": "Dallas Texas",
+        "zipcode": "75204",
+        "cost": "$",
+        "id": "53",
+        "category": "Asian"
     },
     {
-        "restaurant": "",
-        "area": "",
-        "zipcode": "",
-        "cost": "",
-        "id": "",
-        "category": ""
+        "restaurant": "Pho Nam Restaurant",
+        "area": "Haltom Code",
+        "zipcode": "76111",
+        "cost": "$",
+        "id": "54",
+        "category": "Asian"
     },
     {
-        "restaurant": "",
-        "area": "",
-        "zipcode": "",
-        "cost": "",
-        "id": "",
-        "category": ""
+        "restaurant": "Zoli's Pizza",
+        "area": "Fort Worth Texas",
+        "zipcode": "76107",
+        "cost": "$$",
+        "id": "55",
+        "category": "American"
     },
     {
-        "restaurant": "",
-        "area": "",
-        "zipcode": "",
-        "cost": "",
-        "id": "",
-        "category": ""
+        "restaurant": "Boiling Crab",
+        "area": "Dallas Texas",
+        "zipcode": "75243",
+        "cost": "$$",
+        "id": "56",
+        "category": "American"
     },
     {
         "restaurant": "",

@@ -9,5 +9,16 @@ setInterval(function() {
 }, 5000)
 
 
-//Axios requests to grab from backend 
-document.getElementById('')
+//Axios requests to grab from backend from restaurant
+
+
+
+
+
+document.getElementById('restaurantButton').addEventListener('click',() => {
+    axios.get('http://localhost:4000/api/restaurant').then(function (response) {
+        const data = response.data
+        alert(data)
+    })
+})
+

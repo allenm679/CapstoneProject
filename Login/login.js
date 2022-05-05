@@ -1,8 +1,10 @@
-const userContainer = document.querySelector('#user-info')
-const loginForm = document.querySelector('#login-form')
-const registerForm = document.querySelector('#register-form')
+// document is not defined here
 
-const baseURL = `http://localhost:4000/api`
+// const userContainer = document.querySelector('#user-info')
+// const loginForm = document.querySelector('#login-form')
+// const registerForm = document.querySelector('#register-form')
+
+const baseURL = `http://localhost:4000`
 
 
 const login = body => axios.post(`${baseURL}/login`,body).then(res=> {
@@ -83,8 +85,9 @@ function createUserCard(data) {
     userContainer.appendChild(userCard)
 }
 
-loginForm.addEventListener('submit',loginSubmitHandler)
-registerForm.addEventListener('submit', registerSubmitHandler)
+// This isnt defined either
+// loginForm.addEventListener('submit',loginSubmitHandler)
+// registerForm.addEventListener('submit', registerSubmitHandler)
 
 const users = []
 

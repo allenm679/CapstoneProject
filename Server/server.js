@@ -1,10 +1,13 @@
-// require("dotenv").config()
+require("dotenv").config()
 
 const express = require('express')
 const cors = require('cors')
-const path = require('path')
+// const path = require('path')
 
 const app = express()
+
+const {SERVER_PORT} = process.env
+const {seed} = require('../Server/seed')
 
 app.use(express.json())
 app.use(cors())
@@ -15,11 +18,14 @@ const {
     register
 } = require('../Login/login')
 
-app.post(`/api/login`, login)
-app.post(`/api/register`,register)
+//change filedirectory later on!
+ app.post(`/login`, login)
+ app.post(`/register`,register)
+
+ app.post('/seed',seed)
 
 
-app.get(`/api/restaurant`,)
+// app.get(`/`,)
 
 
 const port = process.env.PORT || 4000
