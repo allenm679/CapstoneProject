@@ -13,9 +13,11 @@ module.exports = {
       res.status(400).send("User not found.")
     },
     register: (req, res) => {
-        console.log('Registering User')
-        console.log(req.body)
-        users.push(req.body)
-        res.status(200).send(req.body)
+      const {  username, email, firstName, lastName, password } = req.body;
+      sequelize.query(`
+          INSERT INTO users(username, email, first_name, last_name, password)
+          VALUES('${username}', '${email}', '${firstName}', '${lastName}', '${password}');
+      `).then(dbRes => res.status(200).send(dbRes[0]))
+      .catch(err => console.log(err))
     }
 }
