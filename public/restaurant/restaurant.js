@@ -34,8 +34,7 @@ const displayRestaurants = (arr) => {
         // console.log(random)
         // console.log(arr[i].restaurant)
         console.log(restaurantLength)
-        document.getElementById('doThis').innerHTML = ''
-        document.getElementById('doThis').innerHTML = arr[random]
+        document.getElementById('doThis').innerHTML = arr[random].restaurant
         console.log(arr[random])
         console.log('test')
         return
@@ -43,11 +42,11 @@ const displayRestaurants = (arr) => {
 }
 
 
-getRestaurantBtn.addEventListener("click" ,displayRestaurants );
+getRestaurantBtn.addEventListener("click" , getAllRestaurants);
 console.log('test')
 
 
 
-getAllRestaurants()
+
 
 
