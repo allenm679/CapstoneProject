@@ -15,10 +15,10 @@ setInterval(function() {
 
 
 
-document.getElementById('restaurantButton').addEventListener('click',() => {
-    axios.get('http://localhost:4000/api/restaurant').then(function (response) {
-        const data = response.data
-        alert(data)
-    })
-})
+// document.getElementById('restaurantButton').addEventListener('click',() => {
+//     axios.get('http://localhost:4000').then(function (response) {
+//         const data = response.data
+//         alert(data)
+//     })
+// })
 

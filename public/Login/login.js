@@ -6,7 +6,7 @@ const registerForm = document.querySelector('#register-form')
 const baseURL = `http://localhost:4000`
 
 const login = body => axios.post(`${baseURL}/login`, body).then( res => {
-  console.log(res.data)
+  // console.log(res.data)
   createUserCard(res.data[0])
 }).catch(err => {
   console.log(err)
