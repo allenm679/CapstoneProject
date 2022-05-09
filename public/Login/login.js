@@ -6,11 +6,15 @@ const registerForm = document.querySelector('#register-form')
 const baseURL = `http://localhost:4000`
 
 const login = body => axios.post(`${baseURL}/login`, body).then( res => {
-  // console.log(res.data)
+  console.log(res.data)
+  const {username, user_id} = res.data[0]
+  window.localStorage.setItem('username',username)
+  window.localStorage.setItem('userID',user_id)
+  window.location.href= '../Category/category.html'
   createUserCard(res.data[0])
 }).catch(err => {
   console.log(err)
-  alert('Uh oh. Your request did not work.')
+  alert('Wrong User and Password moron.')
 })
 const register = body => axios.post(`${baseURL}/register`, body).then(res => {
   createUserCard(res.data)
@@ -24,6 +28,14 @@ function loginSubmitHandler(e) {
 
     let username = document.querySelector('#login-username')
     let password = document.querySelector('#login-password')
+
+    if(!username.value) {
+      alert('You have to enter a username idiot')
+      return
+    } else if(!password.value) {
+      alert('You have to enter a password moron')
+      return
+    }
 
     let bodyObj = {
         username: username.value,

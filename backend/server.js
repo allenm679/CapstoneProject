@@ -29,6 +29,14 @@ const {
 
 app.get(`/`,getRestaurant)
 
+const {
+    favRestaurant,
+    deleteRestaurant
+} = require("./profile")
+
+app.post('/',favRestaurant)
+app.delete('/', deleteRestaurant)
+
 
 const port = process.env.PORT || SERVER_PORT
 
