@@ -163,7 +163,7 @@ body{
 
 /* css for manual sliders */
 
-/* header {
+ header {
     height: 80px; 
     display: flex; 
     justify-content: center; 
@@ -175,7 +175,7 @@ body{
   main {
     display: flex; 
     justify-content: center;
-    background: turquoise
+    
   }  
 
 input[type='text'] {
@@ -204,7 +204,7 @@ input[type='text'] {
   }
   
   .user-card {
-    background-color: turquoise;
+    background-color: #5d4954;
     width: 300px;
     margin: 20px; 
     display: flex;
@@ -233,7 +233,15 @@ input[type='text'] {
   .last-name {
     font-size: 15px;
     margin: 5px 0;
-  } */
+  } 
+
+  main{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
 
 
 /* End of css for login */

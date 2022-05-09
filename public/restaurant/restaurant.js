@@ -11,6 +11,10 @@ const restaurantCallback = ({ data: restaurants}) => displayRestaurants(restaura
 const errCallback = err => console.log(err.response.data)
 
 const getAllRestaurants = () => axios.get(baseURL).then(restaurantCallback).catch(errCallback)
+const favRestaurant = body => axios.post(baseURL, body ).then(restaurantCallback).catch(errCallback)
+const deleteRestaurant = id => axios.delete(`${baseURL}/${id}`, {type}).then(restaurantCallback).catch(errCallback)
+
+
 
 
 
@@ -46,7 +50,10 @@ getRestaurantBtn.addEventListener("click" , getAllRestaurants);
 console.log('test')
 
 
-
+document.getElementById('restbtn').onclick = function () {
+    let myRest = document.getElementById("favrest").value
+    console.log(`So ${myRest} is your favorite restaurant?`)
+}
 
 
 
