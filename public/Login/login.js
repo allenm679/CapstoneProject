@@ -2,7 +2,6 @@ const userContainer = document.querySelector('#user-info')
 const loginForm = document.querySelector('#login-form')
 const registerForm = document.querySelector('#register-form')
 
-
 const baseURL = `http://localhost:4000`
 
 const login = body => axios.post(`${baseURL}/login`, body).then( res => {
@@ -14,7 +13,7 @@ const login = body => axios.post(`${baseURL}/login`, body).then( res => {
   createUserCard(res.data[0])
 }).catch(err => {
   console.log(err)
-  alert('Wrong User and Password moron.')
+  alert('Must Create an account first.')
 })
 const register = body => axios.post(`${baseURL}/register`, body).then(res => {
   createUserCard(res.data)

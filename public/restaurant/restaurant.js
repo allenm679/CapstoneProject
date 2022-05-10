@@ -1,18 +1,18 @@
 
 //code for random restaurant
 const getRestaurantBtn = document.getElementById('get-restaurant')
-
+// const baseURL = `http://127.0.0.1:5500`
 const baseURL = `http://localhost:4000`
 
 
 
 
-const restaurantCallback = ({ data: restaurants}) => displayRestaurants(restaurants)
+const restaurantCallback = ({ data: restaurant}) => displayRestaurants(restaurant)
 const errCallback = err => console.log(err.response.data)
 
-const getAllRestaurants = () => axios.get(baseURL).then(restaurantCallback).catch(errCallback)
-const favRestaurant = body => axios.post(baseURL, body ).then(restaurantCallback).catch(errCallback)
-const deleteRestaurant = id => axios.delete(`${baseURL}/${id}`, {type}).then(restaurantCallback).catch(errCallback)
+const getAllRestaurants = () => axios.get(`${baseURL}/getall`).then(restaurantCallback).catch(errCallback)
+// const favRestaurant = body => axios.post(baseURL, body ).then(restaurantCallback).catch(errCallback)
+// const deleteRestaurant = id => axios.delete(`${baseURL}/${id}`, {type}).then(restaurantCallback).catch(errCallback)
 
 
 
@@ -28,7 +28,6 @@ const deleteRestaurant = id => axios.delete(`${baseURL}/${id}`, {type}).then(res
 // const displayRestaurants = Math.floor(Math.random() * getAllRestaurants.length)
 
 const displayRestaurants = (arr) => {
-    let restaurant = document.querySelector('#get-restaurant')
     let arrLength = arr.length
     // console.log(arr[0])
     // console.log(arrLength)
@@ -50,10 +49,7 @@ getRestaurantBtn.addEventListener("click" , getAllRestaurants);
 console.log('test')
 
 
-document.getElementById('restbtn').onclick = function () {
-    let myRest = document.getElementById("favrest").value
-    console.log(`So ${myRest} is your favorite restaurant?`)
-}
+
 
 
 
